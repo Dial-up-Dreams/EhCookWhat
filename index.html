@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EhCookWhat - Chinese food recipes made easy, tasty, and doable. Your friendly guide to cooking Chinese dishes at home.">
+    <title>EhCookWhat - Chinese Food Recipes Made Easy</title>
+    <link rel="stylesheet" href="noodlestyles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo"><img src="logo.svg" alt="EhCookWhat" class="logo-image"></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="home.html" class="nav-link">About</a>
+                <a href="rice.html" class="nav-link">Rice</a>
+                <a href="noodles.html" class="nav-link">Noodles</a>
+                <a href="soup.html" class="nav-link">Soup</a>
+                <a href="vegetables.html" class="nav-link">Vegetables</a>
+                <a href="dessert.html" class="nav-link">Dessert</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">EhCookWhat</h1>
+            <p class="hero-subtitle">Chinese food recipes made easy, tasty, and doable</p>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories scroll-animate">
+        <div class="container">
+            <h2>What Are You Craving?</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <h3>🍚 Rice</h3>
+                    <p>From classic fried rice to fragrant clay pot dishes, discover comforting rice-based meals that are filling and satisfying.</p>
+                    <a href="rice.html" class="btn">Explore Rice Recipes</a>
+                </div>
+                <div class="category-card">
+                    <h3>🍜 Noodles</h3>
+                    <p>Whether stir-fried, soupy, or cold, explore noodle dishes that are quick to make and incredibly delicious.</p>
+                    <a href="noodles.html" class="btn">Explore Noodle Recipes</a>
+                </div>
+                <div class="category-card">
+                    <h3>🍲 Soup</h3>
+                    <p>Warm, nourishing soups that comfort the soul. From simple egg drop to hot and sour, find your perfect bowl.</p>
+                    <a href="soup.html" class="btn">Explore Soup Recipes</a>
+                </div>
+                <div class="category-card">
+                    <h3>🥬 Vegetables</h3>
+                    <p>Simple stir-fries and vegetable dishes that bring color and nutrition to your table with minimal effort.</p>
+                    <a href="vegetables.html" class="btn">Explore Vegetable Recipes</a>
+                </div>
+                <div class="category-card">
+                    <h3>🍮 Dessert</h3>
+                    <p>Sweet endings to your meal. Discover traditional Chinese desserts that are surprisingly easy to recreate at home.</p>
+                    <a href="dessert.html" class="btn">Explore Dessert Recipes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Made for people who love Chinese food but hate deciding what to cook.</p>
+            <p class="copyright">&copy; 2026 EhCookWhat. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Observe all scroll-animate elements
+            const animateElements = document.querySelectorAll('.scroll-animate');
+            animateElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1194 @@
+/* ===================================
+   COLOUR PALETTE: Pastel Yellow Theme
+   ===================================
+   Primary: #E6D5B8 (Soft Muted Gold)
+   Secondary: #F0DFA8 (Pastel Yellow)
+   Background: #FFFACD (Lemon Chiffon)
+   Text: #1A1A1A (Dark Gray)
+   Accent: #F9F4E0 (Cream)
+   =================================== */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #1A1A1A;
+    background-color: #FFFACD;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #D4B896;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-logo:hover {
+    color: #E6D5B8;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #1A1A1A;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #E6D5B8;
+}
+
+.nav-link.active {
+    color: #D4B896;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #D4B896;
+}
+
+/* Logo Image */
+.logo-image {
+    height: 50px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover .logo-image {
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #FFFACD 0%, #F0DFA8 50%, #E6D5B8 100%);
+    color: #1A1A1A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    box-shadow: inset 0 -3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    animation: fadeInUp 0.8s ease-out backwards;
+    color: #1A1A1A;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    color: #333333;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Intro Section */
+.intro {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    color: #D4B896;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.intro p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: center;
+    color: #333333;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #FFF8F0, #F5E6D3);
+}
+
+.how-it-works h2 {
+    font-size: 2.5rem;
+    color: #D4B896;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step {
+    text-align: center;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background-color: #E6D5B8;
+    color: #1A1A1A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 10px rgba(230, 213, 184, 0.3);
+}
+
+.step h3 {
+    font-size: 1.25rem;
+    color: #1A1A1A;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 1rem;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Categories Section */
+.categories {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.categories h2 {
+    font-size: 2.5rem;
+    color: #D4B896;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFFACD 100%);
+    border: 2px solid #F0DFA8;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(230, 213, 184, 0.2);
+    border-color: #E6D5B8;
+}
+
+.category-card h3 {
+    font-size: 1.75rem;
+    color: #1A1A1A;
+    margin-bottom: 15px;
+}
+
+.category-card p {
+    font-size: 1rem;
+    color: #333333;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    min-height: 80px;
+}
+
+/* Category Hero (for individual category pages) */
+.category-hero {
+    background: linear-gradient(135deg, #FFE55C 0%, #FFD700 100%);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.category-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 0.6s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background-color: #E6D5B8;
+    color: #1A1A1A;
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #F0DFA8;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Scroll Animations */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Chatbot Section */
+.chatbot-section {
+    padding: 80px 20px;
+    background-color: #F9F4E0;
+}
+
+.chatbot-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.chatbot-intro {
+    font-size: 1.125rem;
+    color: #424242;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    transition: opacity 0.3s ease;
+}
+
+.chatbot-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(230, 213, 184, 0.15);
+    border: 2px solid #F0DFA8;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+}
+
+/* Chatbot Card Header */
+.chatbot-card-header {
+    padding: 30px 24px 20px;
+    text-align: left;
+    background-color: #F9F4E0;
+    border-radius: 16px 16px 0 0;
+    border-bottom: 1px solid #F0DFA8;
+}
+
+.bot-icon {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.chatbot-card-header h2 {
+    font-size: 1.75rem;
+    color: #1A1A1A;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.bot-description {
+    font-size: 1rem;
+    color: #333333;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Chat Messages Area */
+.chat-messages {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #F9F4E0;
+    border-radius: 0;
+}
+
+/* Message Bubbles */
+.message {
+    display: flex;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-content {
+    max-width: 80%;
+    padding: 12px 18px;
+    border-radius: 18px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+/* Bot Message (left aligned) */
+.bot-message .message-content {
+    background-color: white;
+    color: #1A1A1A;
+    border: 1px solid #F0DFA8;
+    border-radius: 18px 18px 18px 4px;
+}
+
+/* User Message (right aligned) */
+.user-message {
+    justify-content: flex-end;
+}
+
+.user-message .message-content {
+    background-color: #E6D5B8;
+    color: #1A1A1A;
+    border-radius: 18px 18px 4px 18px;
+}
+
+/* Markdown Styling in Messages */
+.message-content strong {
+    font-weight: 600;
+}
+
+.message-content em {
+    font-style: italic;
+}
+
+.message-content code {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.user-message .message-content code {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Typing Indicator */
+.typing-indicator .message-content {
+    padding: 16px 20px;
+}
+
+.typing-dots {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.typing-dots span {
+    width: 8px;
+    height: 8px;
+    background-color: #9E9E9E;
+    border-radius: 50%;
+    animation: typing 1.4s infinite;
+}
+
+.typing-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    30% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+/* Chat Input Area */
+.chat-input-wrapper {
+    display: flex;
+    gap: 12px;
+    padding: 20px;
+    background-color: white;
+    border-top: 1px solid #E8D4BE;
+    border-radius: 0 0 16px 16px;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 14px 18px;
+    border: 1px solid #F0DFA8;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #FFFACD;
+}
+
+.chat-input:focus {
+    border-color: #E6D5B8;
+    box-shadow: 0 0 0 3px rgba(230, 213, 184, 0.1);
+    background-color: white;
+}
+
+.chat-input::placeholder {
+    color: #9E9E9E;
+}
+
+.chat-send-btn {
+    padding: 14px 28px;
+    background-color: #E6D5B8;
+    color: #1A1A1A;
+    border: none;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.chat-send-btn:hover:not(:disabled) {
+    background-color: #F0DFA8;
+    transform: scale(1.05);
+}
+
+.chat-send-btn:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.chat-send-btn:disabled {
+    background-color: #BDBDBD;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Scrollbar Styling */
+.chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #F5F5F5;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #BDBDBD;
+    border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #9E9E9E;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #4A3F35 0%, #2C2416 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Recipe Modal */
+.recipe-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.recipe-modal-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+.recipe-modal {
+    position: fixed;
+    right: -500px;
+    top: 0;
+    bottom: 0;
+    width: 500px;
+    background-color: white;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    overflow-y: auto;
+    transition: right 0.4s ease;
+    padding: 40px 30px;
+}
+
+.recipe-modal.active {
+    right: 0;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #1A1A1A;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: #E6D5B8;
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+    color: #1A1A1A;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.modal-content .time-info {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #F0DFA8;
+}
+
+.time-info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.time-info-item strong {
+    font-size: 0.85rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.time-info-item span {
+    font-size: 1.3rem;
+    color: #D4B896;
+    font-weight: 600;
+}
+
+.modal-content h3 {
+    font-size: 1.2rem;
+    color: #D4B896;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.modal-content li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #333;
+    line-height: 1.6;
+}
+
+.modal-content li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #E6D5B8;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.modal-content ol {
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.modal-content ol li {
+    padding: 10px 0;
+    padding-left: 15px;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+.modal-content p {
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+    .recipe-modal {
+        width: 100%;
+        right: -100%;
+    }
+}
+
+.footer p {
+    font- {
+        min-height: 50vh;
+        padding: 40px 20px;
+    }
+
+    .logo-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+        margin-bottom: 10px;
+    }
+}
+
+.footer .copyright {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .intro h2,
+    .how-it-works h2,
+    .categories h2 {
+        font-size: 2rem;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card p {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        padding: 30px 20px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .category-title {
+        font-size: 2rem;
+    }
+
+    .category-description {
+        font-size: 1rem;
+    }
+
+    .intro,
+    .how-it-works,
+    .categories {
+        padding: 50px 20px;
+    }
+
+    .intro h2,
+    .how-it-works h2,
+    .categories h2 {
+        font-size: 1.75rem;
+    }
+
+    .category-card {
+        padding: 25px;
+    }
+
+    .chatbot-container {
+        height: 500px;
+    }
+
+    .chatbot-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .bot-icon {
+        font-size: 2.5rem;
+    }
+
+    .chatbot-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .message-content {
+        max-width: 90%;
+    }
+
+    .chat-input-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .chat-send-btn {
+        width: 100%;
+    }
+}
+
+/* ===================================
+   RECIPE CARDS & COOKBOOK STYLES
+   =================================== */
+
+/* Recipe Grid */
+.recipe-section {
+    padding: 80px 20px;
+    background-color: #FFFACD;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #1A1A1A;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Individual Recipe Card */
+.recipe-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-left: 5px solid #E6D5B8;
+    position: relative;
+}
+
+.recipe-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-image {
+    font-size: 4rem;
+    text-align: center;
+    padding: 0;
+    background: linear-gradient(135deg, #FFFACD 0%, #F0DFA8 100%);
+    border-bottom: 1px solid #E6D5B8;
+    overflow: hidden;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipe-label {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #E6D5B8;
+    color: #1A1A1A;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.recipe-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 10px;
+}
+
+.recipe-description {
+    color: #333333;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.recipe-meta {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #333333;
+}
+
+.recipe-meta span {
+    background-color: #FFFACD;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid #F0DFA8;
+}
+
+.recipe-ingredients {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #FFFACD;
+    border-radius: 8px;
+    border-left: 3px solid #E6D5B8;
+    flex: 1;
+}
+
+.recipe-ingredients strong {
+    color: #D4B896;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.recipe-ingredients ul {
+    list-style: none;
+    font-size: 0.9rem;
+    color: #333333;
+}
+
+.recipe-ingredients li {
+    padding: 4px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.recipe-ingredients li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.recipe-btn {
+    align-self: flex-start;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #1A1A1A;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.recipe-btn:hover {
+    background-color: #FFC300;
+    transform: translateX(4px);
+}
+
+/* Preferences/Filter Section */
+.preferences-section {
+    padding: 60px 20px;
+    background-color: white;
+    border-top: 1px solid #FFE680;
+    border-bottom: 1px solid #FFE680;
+}
+
+.filter-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.filter-select {
+    padding: 10px 15px;
+    border: 2px solid #FFE55C;
+    border-radius: 6px;
+    background-color: white;
+    color: #1A1A1A;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+.filter-select:hover {
+    border-color: #FFD700;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #FFD700;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+}
+
+/* Tips Section */
+.tips-section {
+    padding: 80px 20px;
+    background-color: #FFFACD;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tip-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border-top: 4px solid #FFD700;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.tip-card h4 {
+    font-size: 1.2rem;
+    color: #FFD700;
+    margin-bottom: 12px;
+}
+
+.tip-card p {
+    color: #333333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Category Hero */
+.category-hero {
+    background: linear-gradient(135deg, #F0DFA8 0%, #E6D5B8 100%);
+    color: #1A1A1A;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.category-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1A1A1A;
+}
+
+.category-description {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #1A1A1A;
+}
+
+/* Responsive Design for Recipes */
+@media (max-width: 768px) {
+    .recipe-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .category-title {
+        font-size: 2rem;
+    }
+
+    .filter-options {
+        gap: 15px;
+    }
+
+    .filter-select {
+        min-width: 150px;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-meta {
+        gap: 8px;
+    }
+
+    .recipe-meta span {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+}

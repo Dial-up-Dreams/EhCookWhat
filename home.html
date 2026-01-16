@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about EhCookWhat - Your friendly guide to cooking Chinese dishes at home">
+    <title>About Us - EhCookWhat</title>
+    <link rel="stylesheet" href="noodlestyles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo"><img src="logo.svg" alt="EhCookWhat" class="logo-image"></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home.html" class="nav-link active">About</a>
+                <a href="rice.html" class="nav-link">Rice</a>
+                <a href="noodles.html" class="nav-link">Noodles</a>
+                <a href="soup.html" class="nav-link">Soup</a>
+                <a href="vegetables.html" class="nav-link">Vegetables</a>
+                <a href="dessert.html" class="nav-link">Dessert</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">About EhCookWhat</h1>
+            <p class="hero-subtitle">Your friendly guide to cooking Chinese dishes at home</p>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro scroll-animate">
+        <div class="container">
+            <h2>Why EhCookWhat?</h2>
+            <p>We get it – deciding what Chinese food to cook can be overwhelming. With so many dishes and ingredients, where do you even start?</p>
+            <p>EhCookWhat is here to help. We focus on <strong>practical, fragrant, home-style dishes</strong> that are simple enough to make on a weeknight but tasty enough to impress. No complicated techniques, no stress – just good food that brings comfort to your table.</p>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works scroll-animate">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Choose a category</h3>
+                    <p>Pick what you're craving – rice, noodles, soup, vegetables, or dessert</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Chat with the cooking assistant</h3>
+                    <p>Tell our AI assistant what you have and get personalized suggestions</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get recipe suggestions</h3>
+                    <p>Receive easy-to-follow recipes tailored to your needs</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Cook with confidence</h3>
+                    <p>Follow simple steps and enjoy delicious Chinese food at home</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Made for people who love Chinese food but hate deciding what to cook.</p>
+            <p class="copyright">&copy; 2026 EhCookWhat. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Observe all scroll-animate elements
+            const animateElements = document.querySelectorAll('.scroll-animate');
+            animateElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
